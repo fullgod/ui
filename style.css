@@ -1,0 +1,57 @@
+/*
+Theme Name: Design
+Support URI: 
+Description: The-design.org
+Author: Bege
+Author URI: http://www.the-design.org
+Version: 1
+License: GNU General Public License v2.0
+Theme URI: http://www.the-design.org
+*/
+
+body {
+	background: url("img/bg.jpg") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
+}
+
+
+
+#content {
+	background: none repeat scroll 0 0 #ebedf2;
+    border-top: 1px solid #ced2d9;
+    padding: 15px 70px 15px 58px;
+    position: relative;
+	height: 300px;
+}
+#use {
+    background: url("img/bg-use.jpg") repeat scroll 0 0 #181717;
+    color: #fff;
+	height: 300px;
+}
+#boxes {
+}
+#boxes .item-box {
+	background: none repeat scroll 0 0 #0083dd;
+	height: 300px;
+    text-align: center;
+}
+#boxes .item-box:hover {
+    background-color: #0071cc;
+}
+#boxes .item-box:hover h3 {
+    border-bottom: 1px solid #208ce9;
+    border-top: 1px solid #208ce9;
+}
+footer {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 25px;
+    display: block;
+    padding: 0;
+    position: absolute;
+    right: 25px;
+    width: auto;
+    z-index: 100;
+}
+
+footer {
+    transition: opacity 250ms ease-out 0s;
+}
