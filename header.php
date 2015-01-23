@@ -20,6 +20,7 @@
 <div id="container">
     <div class="header">
 	<div class="units-row">
+		<div class="unit-100 center">LOGO</div>
 		<div class="unit-30">123
 			<a href="<?php echo home_url(); ?>">
                 <div class="logo left" style="background-image: url(<?php echo $logo;?>)"></div>
