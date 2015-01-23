@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
-<div class="units-row">
-	<div id="content">
-						
-			
+
+<section class="content">
+	<div class="units-row">
+		<div class="unit-50">123</div>		
+		<div class="unit-50">
 						<?php
 						//get_template_part( 'loop', 'page' );
 						 wp_reset_query();
@@ -14,10 +15,11 @@
 							endif;
 						wp_reset_query();
 						?>
-						
-			
-					
-	</div><!--/content-->
+		</div>	
+	</div>		
+</section>
+
+<div class="units-row">
 	<div id="use">
 						
 			
@@ -39,7 +41,7 @@
 			
 					
 	</div><!--/content-->
-	<div id="boxes" class="clearfix"">
+	<div id="boxes" class="clearfix">
 		<div class="units-row units-split">
 			<div class="unit-25 item-box"><h1>Title</h1></div>
 			<div class="unit-25 item-box"><h2>Title</h2></div>
