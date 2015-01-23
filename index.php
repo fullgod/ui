@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
-<div class="units-row">
-	<div id="content">
-						
-			
+
+<section class="content">
+	<div class="units-row">
+		<div class="unit-50">123</div>		
+		<div class="unit-50">
 						<?php
 						/* Run the loop to output the page.
 						 * If you want to overload this in a child theme then include a file
@@ -18,10 +19,11 @@
 							endif;
 						wp_reset_query();
 						?>
-						
-			
-					
-	</div><!--/content-->
+		</div>	
+	</div>		
+</section>
+
+<div class="units-row">
 	<div id="use">
 						
 			
@@ -43,7 +45,7 @@
 			
 					
 	</div><!--/content-->
-	<div id="boxes" class="clearfix"">
+	<div id="boxes" class="clearfix">
 		<div class="units-row units-split">
 			<div class="unit-25 item-box">40%</div>
 			<div class="unit-25 item-box">40%</div>
