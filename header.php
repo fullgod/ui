@@ -17,17 +17,33 @@
 </head>
        
 <body <?php body_class(); ?>>
-<div id="container">
-    <div class="header">
+<header>
 	<div class="units-row">
-		<div class="unit-100 center">LOGO</div>
-		<div class="unit-30">123
-			<a href="<?php echo home_url(); ?>">
-                <div class="logo left" style="background-image: url(<?php echo $logo;?>)"></div>
-            </a>
+		<div class="unit-30">
+			<div class="unit-centered unit-60 text-centered logo">
+			<div class="unit-100 center">LOGO</div>
+			<h1>UI</h1>
+			<h2>Разработка сайтов, wordpress</h2>
+			<div class="heading-sep"></div>
+				<a href="<?php echo home_url(); ?>">
+					<div class="logo left" style="background-image: url(<?php echo $logo;?>)"></div>
+				</a>
+			</div>
 		</div>
-		<div class="unit-70">123</div>
 	</div>
+</header>
+
+
+<nav>
+	<div class="unit-centered unit-80">
+		<ul class="blocks-5 blocks-mobile-33">
+			<li>Category</li>
+			<li>Category</li>
+			<li>Category</li>
+			<li>Category</li>
+			<li><input type="search" class="input-on-black" placeholder="Поиск"></li>
+		</ul>
 	</div>
-</div>
+</nav>
+
 
