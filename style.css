@@ -1,5 +1,5 @@
 /*
-Theme Name: Design
+Theme Name: ui
 Support URI: 
 Description: The-design.org
 Author: Bege
@@ -61,7 +61,7 @@ nav li {
 	line-height: 3.9em;
 }
 
-#content {
+.content {
 	background: none repeat scroll 0 0 #ebedf2;
     border-top: 1px solid #ced2d9;
     padding: 15px 70px 15px 58px;

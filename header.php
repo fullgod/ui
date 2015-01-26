@@ -17,6 +17,8 @@
 </head>
        
 <body <?php body_class(); ?>>
+<!--
+
 <header>
 	<div class="units-row">
 		<div class="unit-30">
@@ -33,6 +35,8 @@
 	</div>
 </header>
 
+
+-->
 
 <nav>
 	<div class="unit-centered unit-80">
