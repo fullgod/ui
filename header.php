@@ -21,7 +21,6 @@
 	<div class="units-row">
 		<div class="unit-30">
 			<div class="unit-centered unit-60 text-centered logo">
-			<div class="unit-100 center">LOGO</div>
 			<h1>UI</h1>
 			<h2>Разработка сайтов, wordpress</h2>
 			<div class="heading-sep"></div>
@@ -46,4 +45,12 @@
 	</div>
 </nav>
 
-
+<nav class="navbar navbar-black-example">
+<ul>
+			<li>Category</li>
+			<li>Category</li>
+			<li>Category</li>
+			<li>Category</li>
+			<li><input type="search" class="input-on-black" placeholder="Поиск"></li>
+</ul>
+</nav>

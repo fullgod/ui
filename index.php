@@ -52,4 +52,18 @@
 </div>
 
 
+<section class="blog">
+<div class="units-row">
+	<div id="boxes" class="clearfix">
+		<div class="units-row">
+			<div class="unit-100"><h1>BLOG</h1></div>
+		</div>
+		<div class="units-row units-split">
+			<div class="unit-50 item-box"><h4>Title</h4></div>
+			<div class="unit-50 item-box"><h4>Title</h4></div>
+		</div>
+	</div>
+</div>
+</section>
+
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
-<section class="contacts">
+<section class="contacts unit-centered">
 	<div class="units-row">
-		<div class="unit-33"></div>
+		<div class="unit-33">33%</div>
 		<div class="unit-33">33%</div>
 		<div class="unit-33">33%</div>
 	</div>
