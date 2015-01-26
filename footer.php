@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 <section class="contacts unit-centered">
+=======
+<!--<section class="contacts">
+>>>>>>> origin/master
 	<div class="units-row">
 		<div class="unit-33">33%</div>
 		<div class="unit-33">33%</div>
 		<div class="unit-33">33%</div>
 	</div>
-
 </section>
+-->
 <footer>
 	<nav id="metanav">
 		<a title="DE" href="/">DE</a>

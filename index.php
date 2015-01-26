@@ -2,24 +2,33 @@
 
 
 <section class="content">
-	<div class="units-row">
-		<div class="unit-50">123</div>		
-		<div class="unit-50">
-						<?php
-						//get_template_part( 'loop', 'page' );
-						 wp_reset_query();
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							 endwhile;
-							else:
-							endif;
-						wp_reset_query();
-						?>
-		</div>	
+	<div class="units-row">	
+		
+
+		
+		
+<!-- Последние добавленные -->	
+  
+<?php global $post;
+	$myposts = get_posts('showposts='.get_theme_mod('blog').'');
+	foreach($myposts as $post) : setup_postdata($post);
+?>
+	<div class="unit-50">
+		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+			<h2><?php the_title('', '', true, '30') ?></h2>
+		</a>	
+		<p><?php the_content_limit(470, ''); ?></p>
+	</div>
+	
+<?php endforeach; ?>
+
+<!-- Конец Последние добавленные -->
+		
+		
 	</div>		
 </section>
 
-<div class="units-row">
+<!--<div class="units-row">
 	<div id="use">
 						
 			
@@ -40,7 +49,7 @@
 						
 			
 					
-	</div><!--/content-->
+	</div>
 	<div id="boxes" class="clearfix">
 		<div class="units-row units-split">
 			<div class="unit-25 item-box"><h1>Title</h1></div>
@@ -50,7 +59,7 @@
 		</div>
 	</div>
 </div>
-
+-->
 
 <section class="blog">
 <div class="units-row">
