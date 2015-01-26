@@ -39,6 +39,15 @@ if ((strlen($_GET['p']) > 0) && ($espacio = strpos($content, " ", $max_char ))) 
    }
 }
 
+
+function remove_menus(){
+  remove_menu_page( 'upload.php' );                 //Медиа
+  remove_menu_page( 'edit-comments.php' );          //Комментарии
+  remove_menu_page( 'users.php' );                  //Пользователи
+}
+add_action( 'admin_menu', 'remove_menus' );
+
+
 function clear_dash(){
 	$dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
 	$dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];

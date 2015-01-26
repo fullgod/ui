@@ -2,33 +2,33 @@
 
 
 <section class="content">
-	<div class="units-row">
-		<div class="unit-50">123</div>		
-		<div class="unit-50">
+	<div class="units-row">	
+		
 
 		
 		
-				<!-- Последние добавленные -->	
+<!-- Последние добавленные -->	
   
-			<?php global $post;
-	            $myposts = get_posts('showposts='.get_theme_mod('blog').'');
-	            foreach($myposts as $post) : setup_postdata($post);
-			?>
+<?php global $post;
+	$myposts = get_posts('showposts='.get_theme_mod('blog').'');
+	foreach($myposts as $post) : setup_postdata($post);
+?>
+	<div class="unit-50">
+		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+			<h2><?php the_title('', '', true, '30') ?></h2>
+		</a>	
+		<p><?php the_content_limit(470, ''); ?></p>
+	</div>
+	
+<?php endforeach; ?>
 
-					<a class="cat_content__link" href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-						<h2><?php the_title('', '', true, '30') ?></h2>
-					</a>	
-					<p><?php the_content_limit(470, ''); ?></p>
-
-			<?php endforeach; ?>
-
-				<!-- Конец Последние добавленные -->
+<!-- Конец Последние добавленные -->
 		
-		</div>	
+		
 	</div>		
 </section>
 
-<div class="units-row">
+<!--<div class="units-row">
 	<div id="use">
 						
 			
@@ -49,7 +49,7 @@
 						
 			
 					
-	</div><!--/content-->
+	</div>
 	<div id="boxes" class="clearfix">
 		<div class="units-row units-split">
 			<div class="unit-25 item-box"><h1>Title</h1></div>
@@ -59,6 +59,6 @@
 		</div>
 	</div>
 </div>
-
+-->
 
 <?php get_footer(); ?>
