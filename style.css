@@ -9,6 +9,7 @@ License: GNU General Public License v2.0
 Theme URI: http://www.the-design.org
 */
 
+@import "fonts/arnamuserif.css"
 
 HTML, BODY {
     height: 100%;
@@ -68,8 +69,11 @@ nav li {
 }
 .content  .unit-50{
 	background: none repeat scroll 0 0 #208ce9;
-	height: 400px;
+	height: 450px;
 	padding: 20px 35px;
+}
+.content  .unit-50 h2{
+	font-family: 'Arian AMU Serif';
 }
 #use {
     background: url("img/bg-use.jpg") repeat scroll 0 0 #181717;

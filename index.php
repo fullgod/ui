@@ -14,6 +14,12 @@
 	foreach($myposts as $post) : setup_postdata($post);
 ?>
 	<div class="unit-50">
+		<div class="logo" style="background-image: url('/assets/Uploads/RSS-light.svg');"></div>
+		<div class="project-info"></div>
+		<div class="recent-background" style="background-image:url('/assets/Uploads/runstopshop-banner.jpg');"></div>
+		<a class="link-overlay" href="/run-stop-shop/"></a>
+		
+		
 		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 			<h2><?php the_title('', '', true, '30') ?></h2>
 		</a>	

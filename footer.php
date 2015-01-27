@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<section class="contacts unit-centered">
-=======
+
 <!--<section class="contacts">
 >>>>>>> origin/master
 	<div class="units-row">
