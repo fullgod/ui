@@ -46,6 +46,7 @@ header .logo .heading-sep {
     width: 250px;
 	height: 5px;
 }
+
 nav {
     border-top: 2px solid #272726;
     border-bottom: 2px solid #272726;
@@ -61,21 +62,49 @@ nav li {
 	line-height: 3.9em;
 }
 
+.sep {
+    background: none repeat scroll 0 0 #ffffff;
+    margin: 30px auto;
+    width: 250px;
+	height: 5px;
+}
+
 .content {
 	background: none repeat scroll 0 0 #ebedf2;
     border-top: 1px solid #ced2d9;
     position: relative;
 }
+.content h2 {
+	font-size: 4em;
+	text-align: center;
+	color: #333333;
+}
+
 .content  .unit-50{
 	background: none repeat scroll 0 0 #208ce9;
 	height: 400px;
-	padding: 20px 35px;
+	padding: 0;
 }
+
+
+.rollover img {
+    transform: translateZ(0px);
+    transition: all 0.25s linear 0s;
+}
+figure img {
+    float: left;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+
 #use {
     background: url("img/bg-use.jpg") repeat scroll 0 0 #181717;
     color: #fff;
 	height: 300px;
 }
+
 #boxes {
 }
 #boxes .item-box {
@@ -90,6 +119,7 @@ nav li {
     border-bottom: 1px solid #208ce9;
     border-top: 1px solid #208ce9;
 }
+
 footer {
     background: none repeat scroll 0 0 transparent;
     bottom: 25px;
@@ -100,7 +130,6 @@ footer {
     width: auto;
     z-index: 100;
 }
-
 footer {
     transition: opacity 250ms ease-out 0s;
 }

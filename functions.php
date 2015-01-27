@@ -9,6 +9,10 @@ function cat_id_to_name($id) {
 	}
 }
 
+
+add_theme_support( 'post-thumbnails' ); 
+
+
 function the_content_limit($max_char, $more_link_text = '( >)', $stripteaser = 0, $more_file = '') {
     $content = get_the_content($more_link_text, $stripteaser, $more_file);
     $content = apply_filters('the_content', $content);

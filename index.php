@@ -2,31 +2,53 @@
 
 
 <section class="content">
-	<div class="units-row">	
-		
-
-		
-		
-<!-- Последние добавленные -->	
+	<div class="units-row units-split">	
+	<h2><?php echo stripslashes(get_theme_mod('blog')); ?></h2>	
+	<div class="sep"></div>
+<!-- Блог -->	
   
 <?php global $post;
-	$myposts = get_posts('showposts='.get_theme_mod('blog').'');
+	$myposts = get_posts('showposts='.get_theme_mod('blog_number_posts').'');
 	foreach($myposts as $post) : setup_postdata($post);
 ?>
 	<div class="unit-50">
+	<figure class="rollover">
+		
 		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-			<h2><?php the_title('', '', true, '30') ?></h2>
+			
+			<?php echo get_the_post_thumbnail(); ?>
+			
+			<b><?php the_title('', '', true, '30') ?></b>
+			
+			<p><?php the_content_limit(470, '');?></p>
+			
+		
 		</a>	
-		<p><?php the_content_limit(470, ''); ?></p>
+		
+	</figure>
 	</div>
-	
 <?php endforeach; ?>
 
-<!-- Конец Последние добавленные -->
-		
-		
+<!-- /Блог -->	
 	</div>		
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--<div class="units-row">
 	<div id="use">
@@ -61,7 +83,7 @@
 </div>
 -->
 
-<section class="blog">
+<!--<section class="blog">
 <div class="units-row">
 	<div id="boxes" class="clearfix">
 		<div class="units-row">
@@ -74,5 +96,5 @@
 	</div>
 </div>
 </section>
-
+-->
 <?php get_footer(); ?>

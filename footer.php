@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<section class="contacts unit-centered">
-=======
+
 <!--<section class="contacts">
 >>>>>>> origin/master
 	<div class="units-row">
@@ -11,8 +9,11 @@
 </section>
 -->
 <footer>
+
+	<!--
 	<nav id="metanav">
 		<a title="DE" href="/">DE</a>
 		<a title="English" href="/en/">EN</a>
 	</nav>
+	-->
 </footer>
