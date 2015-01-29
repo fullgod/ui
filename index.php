@@ -38,7 +38,7 @@
 
 	
 
-		<span class="post-overlay"></span>	
+		<span class="post-overlay"> </span>	
 		</figure>
 		
 		
