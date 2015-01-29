@@ -6,28 +6,56 @@
 	<h2><?php echo stripslashes(get_theme_mod('blog')); ?></h2>	
 	<div class="sep"></div>
 <!-- Блог -->	
-  
+
 <?php global $post;
 	$myposts = get_posts('showposts='.get_theme_mod('blog_number_posts').'');
 	foreach($myposts as $post) : setup_postdata($post);
 ?>
+
+
+
+
+
+
+
 	<div class="unit-50">
-	<figure class="rollover">
+	
+	
+	
+		<figure class="rollover" style="background-image:url('<?php
+		 if ( has_post_thumbnail()) {
+		   $blog_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), "large");
+		   echo $blog_image_url[0];
+		 }
+		 ?>');">
+		 
 		
-		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-			
-			<?php echo get_the_post_thumbnail(); ?>
-			
-			<b><?php the_title('', '', true, '30') ?></b>
-			
-			<p><?php the_content_limit(470, '');?></p>
-			
 		
-		</a>	
+			<div class="feature-views">
+				<b><?php the_title('', '', true, '30') ?></b>
+				<p><?php the_content_limit(470);?></p>		
+			</div>
+
+	
+
+		<span class="post-overlay"></span>	
+		</figure>
 		
-	</figure>
+		
+		
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 <?php endforeach; ?>
+
 
 <!-- /Блог -->	
 	</div>		
@@ -50,7 +78,8 @@
 
 
 
-<!--<div class="units-row">
+<div class="units-row">
+<!--
 	<div id="use">
 						
 			
@@ -72,6 +101,8 @@
 			
 					
 	</div>
+-->
+	
 	<div id="boxes" class="clearfix">
 		<div class="units-row units-split">
 			<div class="unit-25 item-box"><h1>Title</h1></div>
@@ -81,7 +112,7 @@
 		</div>
 	</div>
 </div>
--->
+
 
 <!--<section class="blog">
 <div class="units-row">
