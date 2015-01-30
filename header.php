@@ -48,13 +48,14 @@
 		</ul>
 	</div>
 </nav>
-
+<!--
 <nav class="navbar navbar-black-example">
-<ul>
-			<li>Category</li>
-			<li>Category</li>
-			<li>Category</li>
-			<li>Category</li>
-			<li><input type="search" class="input-on-black" placeholder="Поиск"></li>
-</ul>
+	<ul>
+		<li>Category</li>
+		<li>Category</li>
+		<li>Category</li>
+		<li>Category</li>
+		<li><input type="search" class="input-on-black" placeholder="Поиск"></li>
+	</ul>
 </nav>
+-->
