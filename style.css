@@ -129,10 +129,6 @@ nav li {
 #boxes .item-box:hover {
     background-color: #0071cc;
 }
-#boxes .item-box:hover h3 {
-    border-bottom: 1px solid #208ce9;
-    border-top: 1px solid #208ce9;
-}
 
 footer {
     background: none repeat scroll 0 0 transparent;
