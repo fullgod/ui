@@ -12,8 +12,8 @@
                 remove_filter ('the_excerpt', 'wptexturize');
                 remove_filter ('comment_text', 'wptexturize');
 ?>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script src="<?php echo get_template_directory_uri() . "/js/kube.min.js"; ?>"></script>
+    <script src="<?php echo get_template_directory_uri() . "/js/jquery.js"; ?>"></script>
 </head>
        
 <body <?php body_class(); ?>>
