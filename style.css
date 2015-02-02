@@ -68,13 +68,30 @@ nav li {
     position: relative;
 }
 .content  .unit-50{
-	background: none repeat scroll 0 0 #208ce9;
-	height: 450px;
-	padding: 20px 35px;
+	background-color: rgba(241, 241, 241, 1);
+	height: 382px;
+	color: #bdbdbd;
 }
 .content  .unit-50 h2{
 	font-family: 'Arian AMU Serif';
 }
+.content .rollover {
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.content.rollover img {
+ transform: translateZ(0px);
+ transition: all 0.25s linear 0s;
+ }
+
+.content .rollover:hover {
+
+}
+figure  {
+ float: left;
+ height: auto;
+ max-width: 100%;
+ }
 #use {
     background: url("img/bg-use.jpg") repeat scroll 0 0 #181717;
     color: #fff;
@@ -113,4 +130,18 @@ footer a{
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 12px;
+}
+
+.strict-block {
+    display: block;
+    margin-bottom: 20px;
+}
+.split-stuff> div {
+    margin-right: 2%;
+    width: 23.5%;
+}
+.item-block {
+	height: 147px;
+    background-size: cover !important;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.02);
 }

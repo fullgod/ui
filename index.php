@@ -1,38 +1,79 @@
 <?php get_header(); ?>
 
 
-<section class="content">
-	<div class="units-row">	
-		
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="content">
+	<div class="units-row units-split">
+		<h2><?php echo stripslashes(get_theme_mod('blog')); ?></h2>
+		<div class="sep"></div>
 		
-		
-<!-- Последние добавленные -->	
-  
-<?php global $post;
-	$myposts = get_posts('showposts='.get_theme_mod('blog').'');
+	<!-- Блог -->	
+	<?php global $post;
+	$myposts = get_posts('showposts='.get_theme_mod('blog_number_posts').'');
 	foreach($myposts as $post) : setup_postdata($post);
-?>
+	?>
+
+	
 	<div class="unit-50">
-		<div class="logo" style="background-image: url('/assets/Uploads/RSS-light.svg');"></div>
-		<div class="project-info"></div>
-		<div class="recent-background" style="background-image:url('/assets/Uploads/runstopshop-banner.jpg');"></div>
-		<a class="link-overlay" href="/run-stop-shop/"></a>
+	
 		
+	<figure class="rollover" style="background-image:url('<?php
+		if ( has_post_thumbnail()) {
+		$blog_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), "large");
+		echo $blog_image_url[0];
+		}
+		?>');">
 		
-		<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
-			<h2><?php the_title('', '', true, '30') ?></h2>
-		</a>	
-		<p><?php the_content_limit(470, ''); ?></p>
+		<div class="feature-views">
+			<b><?php the_title('', '', true, '30') ?></b>
+			<p><?php the_content_limit(470);?></p>
+		</div>
+		
+			<span class="post-overlay"> </span>
+	</figure>
+		
+	
 	</div>
 	
-<?php endforeach; ?>
-
-<!-- Конец Последние добавленные -->
-		
-		
-	</div>		
+	<?php endforeach; ?>
+	
+	<!-- /Блог -->	
+	
+	</div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--<div class="units-row">
 	<div id="use">
