@@ -1,5 +1,13 @@
 <?php 
 
+#-----------------------------------------------------------------#
+# Default theme constants
+#-----------------------------------------------------------------#
+define('NECTAR_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/nectar/');
+define('NECTAR_THEME_NAME', 'ui');
+
+
+
 include (TEMPLATEPATH . "/admin/theme-options.php");
 
 # Turn a category ID to a Name
@@ -45,9 +53,9 @@ if ((strlen($_GET['p']) > 0) && ($espacio = strpos($content, " ", $max_char ))) 
 
 
 function remove_menus(){
-  remove_menu_page( 'upload.php' );                 //Медиа
-  remove_menu_page( 'edit-comments.php' );          //Комментарии
-  remove_menu_page( 'users.php' );                  //Пользователи
+  remove_menu_page( 'upload.php' );                 //РњРµРґРёР°
+  remove_menu_page( 'edit-comments.php' );          //РљРѕРјРјРµРЅС‚Р°СЂРёРё
+  remove_menu_page( 'users.php' );                  //РџРѕР»СЊР·РѕРІР°С‚РµР»Рё
 }
 add_action( 'admin_menu', 'remove_menus' );
 
@@ -56,15 +64,15 @@ function clear_dash(){
 	$dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
 	$dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
 
-	unset($dash_side['dashboard_quick_press']); //Быстрая публикация
-	unset($dash_side['dashboard_recent_drafts']); //Последние черновики
-//unset($dash_side['dashboard_primary']); //Блог WordPress
-	unset($dash_side['dashboard_secondary']); //Другие Новости WordPress
+	unset($dash_side['dashboard_quick_press']); //Р‘С‹СЃС‚СЂР°СЏ РїСѓР±Р»РёРєР°С†РёСЏ
+	unset($dash_side['dashboard_recent_drafts']); //РџРѕСЃР»РµРґРЅРёРµ С‡РµСЂРЅРѕРІРёРєРё
+//unset($dash_side['dashboard_primary']); //Р‘Р»РѕРі WordPress
+	unset($dash_side['dashboard_secondary']); //Р”СЂСѓРіРёРµ РќРѕРІРѕСЃС‚Рё WordPress
 
-	unset($dash_normal['dashboard_incoming_links']); //Входящие ссылки
-//unset($dash_normal['dashboard_right_now']); //Текущее состояние блога
-	unset($dash_normal['dashboard_recent_comments']); //Последние комментарии
-	unset($dash_normal['dashboard_plugins']); //Последние Плагины
+	unset($dash_normal['dashboard_incoming_links']); //Р’С…РѕРґСЏС‰РёРµ СЃСЃС‹Р»РєРё
+//unset($dash_normal['dashboard_right_now']); //РўРµРєСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ Р±Р»РѕРіР°
+	unset($dash_normal['dashboard_recent_comments']); //РџРѕСЃР»РµРґРЅРёРµ РєРѕРјРјРµРЅС‚Р°СЂРёРё
+	unset($dash_normal['dashboard_plugins']); //РџРѕСЃР»РµРґРЅРёРµ РџР»Р°РіРёРЅС‹
 }
 add_action('wp_dashboard_setup', 'clear_dash' );
 

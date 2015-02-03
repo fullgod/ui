@@ -18,9 +18,8 @@ function theme_options_css() {
 }
 
 
-function theme_settings_admin() { ?>
+function theme_settings_admin() { 
 
-<?php
 	global $settings, $defaults;
 	if(get_theme_mod('reset')) {
 		echo '<div id="message"><p>'.__('Настройки темы').' <strong>'.__('Вернуться к настройкам по умолчанию').'</strong></p></div>';
