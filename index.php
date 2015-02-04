@@ -1,5 +1,48 @@
 <?php get_header(); ?>
 
+<div class="container-wrap">
+	
+	<div class="container" data-col-num="<?php echo get_theme_mod('blog_number_posts') ?>">
+
+		<div class="portfolio-wrap">
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,7 +118,8 @@
 
 
 
-<!--<div class="units-row">
+<!--
+<div class="units-row">
 	<div id="use">
 						
 			
@@ -108,6 +152,12 @@
 </div>
 -->
 
+
+
+
+
+
+<!--
 <section class="blog">
 <div class="units-row">
 	<div id="boxes" class="clearfix">
@@ -121,5 +171,10 @@
 	</div>
 </div>
 </section>
+-->
+
+
+
+
 
 <?php get_footer(); ?>
