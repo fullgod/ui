@@ -1,79 +1,35 @@
 <?php 
 
-#-----------------------------------------------------------------#
-# Default theme constants
-#-----------------------------------------------------------------#
-define('NECTAR_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/nectar/');
-define('NECTAR_THEME_NAME', 'ui');
+/**
+ * Ebor Framework
+ * Queue Up Theme-Side Framework, everything else is loaded in the ebor-framework plugin.
+ * 
+ * You can install a child theme to modify all aspects of the theme, if you need to modify anything from the /admin/ folder
+ * Just delete the require line below and move it to the functions.php of your child theme, make sure to copy over the entire /admin/ folder too.
+ * It's very rare you'd need to do that, but if you do, you'll need to delete this require on every theme update.
+ * 
+ * @since 1.0.0
+ * @author TommusRhodus
+ */
+require_once ( "admin/init.php" );
 
+/**
+ * Queue up page builder elements.
+ * 
+ * You will not need to remove this line at any point, even with your child theme, see the instructions in page_builder_init.php for how to move blocks into a child theme.
+ * They're designed to be easily overwritten and re-registered from your child theme if you need without having to modify this theme.
+ * 
+ * @since 1.0.0
+ * @author TommusRhodus
+ */
+require_once ( "page_builder_init.php" );
 
+if( function_exists('vc_set_as_theme') )
+	require_once( "vc_init.php" );
 
-include (TEMPLATEPATH . "/admin/theme-options.php");
-
-# Turn a category ID to a Name
-function cat_id_to_name($id) {
-	foreach((array)(get_categories()) as $category) {
-    	if ($id == $category->cat_ID) { return $category->cat_name; break;}
-	}
-}
-
-
-add_theme_support( 'post-thumbnails' ); 
-
-
-function the_content_limit($max_char, $more_link_text = '( >)', $stripteaser = 0, $more_file = '') {
-    $content = get_the_content($more_link_text, $stripteaser, $more_file);
-    $content = apply_filters('the_content', $content);
-    $content = str_replace(']]>', ']]&gt;', $content);
-    $content = strip_tags($content);
-
-if ((strlen($_GET['p']) > 0) && ($espacio = strpos($content, " ", $max_char ))) {
-     $content = substr($content, 0, $espacio);
-      $content = $content;
-      echo "<p>";
-      echo $content;
-      echo " &#8629;";
-      echo "</p>";
-   }
-  else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
-       $content = substr($content, 0, $espacio);
-        $content = $content;
-        echo "<p>";
-        echo $content;
-        echo " >";
-        echo "</p>";
-   }
-   else {
-      echo "<p>";
-      echo $content;
-      echo " >";
-      echo "</p>";
-   }
-}
-
-
-function remove_menus(){
-  remove_menu_page( 'upload.php' );                 //Медиа
-  remove_menu_page( 'edit-comments.php' );          //Комментарии
-  remove_menu_page( 'users.php' );                  //Пользователи
-}
-add_action( 'admin_menu', 'remove_menus' );
-
-
-function clear_dash(){
-	$dash_side = &$GLOBALS['wp_meta_boxes']['dashboard']['side']['core'];
-	$dash_normal = &$GLOBALS['wp_meta_boxes']['dashboard']['normal']['core'];
-
-	unset($dash_side['dashboard_quick_press']); //Быстрая публикация
-	unset($dash_side['dashboard_recent_drafts']); //Последние черновики
-//unset($dash_side['dashboard_primary']); //Блог WordPress
-	unset($dash_side['dashboard_secondary']); //Другие Новости WordPress
-
-	unset($dash_normal['dashboard_incoming_links']); //Входящие ссылки
-//unset($dash_normal['dashboard_right_now']); //Текущее состояние блога
-	unset($dash_normal['dashboard_recent_comments']); //Последние комментарии
-	unset($dash_normal['dashboard_plugins']); //Последние Плагины
-}
-add_action('wp_dashboard_setup', 'clear_dash' );
-
-?>
+/**
+ * Please use a child theme if you need to modify any aspect of the theme, if you need to, you can add code
+ * below here if you need to add extra functionality.
+ * Be warned! Any code added here will be overwritten on theme update!
+ * Add & modify code at your own risk & always use a child theme instead for this!
+ */

@@ -1,119 +1,50 @@
-<?php get_header(); ?>
+<?php 
+	/**
+	 * index.php
+	 * 
+	 * This is the main blog and loop template of Pivot.
+	 * Uses get template part to load the appropriate blog set by the theme options.
+	 * Copy template parts to your child theme to override and make modifications.
+	 * Ensure to copy the folder structure when copying to a child theme.
+	 * 
+	 * @since 1.0.0
+	 * @author tommusrhodus
+	 */
+	get_header(); 
 
-
-
-<section id="content">
-	<div class="units-row units-split">
-		<h2><?php echo stripslashes(get_theme_mod('blog')); ?></h2>
-		<div class="sep"></div>
+	$background = get_option('blog_header_background');
+	$title = get_option('blog_title','Our Blog');
+	$sub = get_option('blog_subtitle', 'News & Views');
+?>
+	
+	<header class="page-header">
 		
-	<!-- Блог -->	
-	<?php global $post;
-	$myposts = get_posts('showposts='.get_theme_mod('blog_number_posts').'');
-	foreach($myposts as $post) : setup_postdata($post);
-	?>
-
-	
-	<div class="unit-50">
-	
+		<?php if( $background ) : ?>
+			<div class="background-image-holder parallax-background">
+				<img class="background-image" alt="Background Image" src="<?php echo $background; ?>">
+			</div>
+		<?php endif; ?>
 		
-	<figure class="rollover" style="background-image:url('<?php
-		if ( has_post_thumbnail()) {
-		$blog_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), "large");
-		echo $blog_image_url[0];
-		}
-		?>');">
-		<div class="work-info-bg"></div>
-		<div class="feature-views">
-			<b><?php the_title('', '', true, '30') ?></b>
-			<p><?php the_content_limit(300);?></p>
-		</div>
-	</figure>
-		
-	
-	</div>
-	
-	<?php endforeach; ?>
-	
-	<!-- /Блог -->	
-	
-	</div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<div class="units-row">
-	<div id="use">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<?php
+						if( $sub )
+							echo '<span class="text-white alt-font">'. $sub .'</span>';
 						
-			
-						<?php
-						/* Run the loop to output the page.
-						 * If you want to overload this in a child theme then include a file
-						 * called loop-page.php and that will be used instead.
-						 */
-						//get_template_part( 'loop', 'page' );
-						 wp_reset_query();
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_content();
-							 endwhile;
-							else:
-							endif;
-						wp_reset_query();
-						?>
-						
-			
-					
-	</div>
-	<div id="boxes" class="clearfix">
-		<div class="units-row units-split">
-			<div class="unit-25 item-box"><h1>Title</h1></div>
-			<div class="unit-25 item-box"><h2>Title</h2></div>
-			<div class="unit-25 item-box"><h3>Title</h3></div>
-			<div class="unit-25 item-box"><h4>Title</h4></div>
-		</div>
-	</div>
-</div>
--->
+						if( $title )
+							echo '<h1 class="text-white">'. $title .'</h1>';
+					?>
+				</div>
+			</div><!--end of row-->
+		</div><!--end of container-->
+		
+	</header>
 
+<?php
+	/**
+	 * Grab the correct blog loop depending on theme options.
+	 */
+	get_template_part('loop/loop-blog', get_option('blog_layout','grid-sidebar'));
 
-
-
-
-
-<!--
-<section class="blog">
-<div class="units-row">
-	<div id="boxes" class="clearfix">
-		<div class="units-row">
-			<div class="unit-100"><h1>BLOG</h1></div>
-		</div>
-		<div class="units-row units-split">
-			<div class="unit-50 item-box"><h4>Title</h4></div>
-			<div class="unit-50 item-box"><h4>Title</h4></div>
-		</div>
-	</div>
-</div>
-</section>
--->
-
-
-
-
-
-<?php get_footer(); ?>
+	get_footer();	
