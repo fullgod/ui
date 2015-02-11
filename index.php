@@ -1,67 +1,8 @@
 <?php get_header(); ?>
 
-<div class="container-wrap">
-	
-	<div class="container" data-col-num="<?php echo get_theme_mod('blog_number_posts') ?>">
-
-		<div class="portfolio-wrap">
-
-		</div>
-	</div>
-</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="content">
+<section id="content">
 	<div class="units-row units-split">
 		<h2><?php echo stripslashes(get_theme_mod('blog')); ?></h2>
 		<div class="sep"></div>
@@ -82,13 +23,11 @@
 		echo $blog_image_url[0];
 		}
 		?>');">
-		
+		<div class="work-info-bg"></div>
 		<div class="feature-views">
 			<b><?php the_title('', '', true, '30') ?></b>
-			<p><?php the_content_limit(470);?></p>
+			<p><?php the_content_limit(300);?></p>
 		</div>
-		
-			<span class="post-overlay"> </span>
 	</figure>
 		
 	

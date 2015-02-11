@@ -62,36 +62,56 @@ nav li {
 	line-height: 3.9em;
 }
 
-.content {
-	background: none repeat scroll 0 0 #ebedf2;
-    border-top: 1px solid #ced2d9;
-    position: relative;
-}
-.content  .unit-50{
-	background-color: rgba(241, 241, 241, 1);
-	height: 382px;
-	color: #bdbdbd;
-}
-.content  .unit-50 h2{
-	font-family: 'Arian AMU Serif';
-}
-.content .rollover {
-	height: 100%;
-	background-repeat: no-repeat;
-}
-.content.rollover img {
- transform: translateZ(0px);
- transition: all 0.25s linear 0s;
- }
 
-.content .rollover:hover {
 
-}
+
+
+
+
+
+
 figure  {
  float: left;
  height: auto;
  max-width: 100%;
  }
+
+#content {
+	background: none repeat scroll 0 0 #ebedf2;
+    border-top: 1px solid #ced2d9;
+    position: relative;
+}
+#content  .unit-50{
+	background-color: rgba(241, 241, 241, 1);
+	height: 382px;
+	color: #bdbdbd;
+}
+#content  .unit-50 h2{
+	font-family: 'Arian AMU Serif';
+}
+#content .rollover {
+	height: 100%;
+	background-repeat: no-repeat;
+}
+#content .rollover .work-info-bg {
+	background-color: #282b30!important;
+	width: 100%!important;
+	opacity: 0.45;
+	height: 89.4%!important;
+	position: absolute;
+}
+#content .rollover .feature-views {
+	opacity: 1!important;
+	padding: 0px 20px;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+}
+
+
+
+
+
 #use {
     background: url("img/bg-use.jpg") repeat scroll 0 0 #181717;
     color: #fff;
